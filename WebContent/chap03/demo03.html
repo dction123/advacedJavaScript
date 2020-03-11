@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	function C(){
+		this.objectPro = "对象属性";
+		C.prototype.objectPro2 = "对象属性2";
+		
+	}
+	C.classPro = "类属性";
+	alert(C.classPro);
+	var c = new C();
+	alert(c.objectPro);
+	alert(c.objectPro2);
+	
+</script>
+</body>
+</html>

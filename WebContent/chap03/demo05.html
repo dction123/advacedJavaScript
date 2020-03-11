@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Animal(name,age){
+			this.name = name;
+			this.age = age;
+			this.shout = function(){
+				alert("我是"+this.name+",今年"+this.age+"岁了");
+			};
+			this.action = function(){
+				alert("吃饭");
+			}
+			
+		};
+		
+		function Dog(name,age){
+			Animal.apply(this, [name,age]);
+		};
+		var tom = new Dog('tom', 111);		
+		alert(tom.name);
+		alert(tom.age);
+		tom.action();
+		tom.shout();
+	</script>
+</body>
+</html>

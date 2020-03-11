@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function C() {
+			var privateFunc = function() {
+				alert("私有方法");
+			};
+			privateFunc();
+			this.objectFunc1 = function() {
+				alert("对象方法");
+			};
+			C.prototype.objectFunc2 = function() {
+				alert("对象方法2");
+			};
+		}
+		C.classFunc = function() {
+			alert("类方法")
+		}
+		C.classFunc();
+
+		var c = new C();
+		c.objectFunc1();
+		c.objectFunc2();
+	</script>
+</body>
+</html>

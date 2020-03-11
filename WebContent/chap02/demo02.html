@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var name = "window object";
+var object = {
+		name : "my object",
+		getNameFunc : function(){
+			var name = "my Function Object";
+			return function(){
+				return this.name;
+			};
+		}
+};
+
+//alert(object.name);
+alert(object.getNameFunc()());
+</script>
+</body>
+</html>

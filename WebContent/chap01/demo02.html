@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+/* 	function say(name,age){
+		alert(name+'今年'+age+'岁了');
+	}
+	say('张三',3); */
+	
+	
+var sayFunction = new Function("name","age","alert(name+'今年'+age+'岁了')");	
+	//alert(sayFunction.toString());	
+	alert(sayFunction.valueOf());	
+</script>
+</body>
+</html>
